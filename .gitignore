@@ -16,3 +16,5 @@ gc.json
 
 # Babel
 .babel_cache/
+
+.DS_Store
