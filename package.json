@@ -1,0 +1,20 @@
+{
+  "name": "starktech",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mstark5652/starktech"
+  },
+  "author": "mstark",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "lint": "standard ./src/**/*.js",
+    "lint:fix": "standard ./src/**/*.js --fix"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "node-sass": "^4.13.1",
+    "standard": "^14.1.0"
+  }
+}
