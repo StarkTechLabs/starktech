@@ -1,3 +1,4 @@
+const THREE = window.THREE
 let container, scene, camera, renderer
 // const clock = new THREE.Clock()
 
@@ -34,7 +35,7 @@ const init = () => {
 
   // lights
 
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.15)
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.25)
   dirLight.position.set(0, -1, 0).normalize()
   dirLight.color.setHSL(0.1, 0.7, 0.5)
   scene.add(dirLight)

@@ -62,7 +62,6 @@ const walkSync = function (dir, filelist = []) {
 if (process.argv[2] === 'upload') {
   // always upload style files to s3
   const files = walkSync('./build')
-  files.push('index.html')
   files.forEach(file => {
     // console.log("File: ", path.basename(file))
     uploadFile(file)
