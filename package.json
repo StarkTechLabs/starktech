@@ -9,12 +9,14 @@
   "author": "mstark",
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
+    "build": "node scripts/build.js",
     "lint": "standard ./src/**/*.js",
     "lint:fix": "standard ./src/**/*.js --fix"
   },
   "devDependencies": {
     "http-server": "^0.12.1",
     "node-sass": "^4.13.1",
+    "rimraf": "^3.0.2",
     "standard": "^14.1.0"
   }
 }
