@@ -21,7 +21,7 @@ const s3 = new AWS.S3({
 
 const uploadFile = (filePath) => {
   const fileContent = fs.readFileSync(filePath)
-  const filename = filePath.replace('static/', '')
+  const filename = filePath.replace('build/', '')
 
   const params = {
     Bucket: S3_BUCKET,
