@@ -14,8 +14,8 @@ const init = () => {
   // world
 
   const s = 250
-  var geometry = new THREE.BoxBufferGeometry(s, s, s)
-  var material = new THREE.MeshPhongMaterial({ color: 0xffffff, specular: 0xffffff, shininess: 50 })
+  const geometry = new THREE.BoxBufferGeometry(s, s, s)
+  const material = new THREE.MeshPhongMaterial({ color: 0xffffff, specular: 0xffffff, shininess: 50 })
 
   objects = []
 
@@ -28,7 +28,6 @@ const init = () => {
     mesh.rotation.x = Math.random() * Math.PI
     mesh.rotation.y = Math.random() * Math.PI
     mesh.rotation.z = Math.random() * Math.PI
-    // mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 50 + 100
 
     mesh.matrixAutoUpdate = false
     mesh.updateMatrix()
