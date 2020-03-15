@@ -1,6 +1,6 @@
 const THREE = window.THREE
 let container, scene, camera, renderer
-// const clock = new THREE.Clock()
+var objects
 
 const init = () => {
   container = document.getElementById('container')
@@ -17,6 +17,8 @@ const init = () => {
   var geometry = new THREE.BoxBufferGeometry(s, s, s)
   var material = new THREE.MeshPhongMaterial({ color: 0xffffff, specular: 0xffffff, shininess: 50 })
 
+  objects = []
+
   for (var i = 0; i < 1000; i++) {
     const mesh = new THREE.Mesh(geometry, material)
     mesh.position.x = 8000 * (2.0 * Math.random() - 1.0)
@@ -26,16 +28,18 @@ const init = () => {
     mesh.rotation.x = Math.random() * Math.PI
     mesh.rotation.y = Math.random() * Math.PI
     mesh.rotation.z = Math.random() * Math.PI
+    // mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 50 + 100
 
     mesh.matrixAutoUpdate = false
     mesh.updateMatrix()
 
+    objects.push(mesh)
     scene.add(mesh)
   }
 
   // lights
 
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.25)
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.30)
   dirLight.position.set(0, -1, 0).normalize()
   dirLight.color.setHSL(0.1, 0.7, 0.5)
   scene.add(dirLight)
@@ -57,7 +61,12 @@ const onWindowResize = () => {
 }
 
 const render = () => {
-  // const delta = clock.getDelta()
+  for (const item of objects) {
+    item.rotation.x += 0.005
+    item.rotation.y += 0.007
+    item.updateMatrix()
+  }
+
   renderer.render(scene, camera)
 }
 
