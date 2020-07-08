@@ -1,5 +1,5 @@
 const THREE = window.THREE
-let container, scene, camera, renderer
+let container, scene, camera, renderer, controls
 var objects
 
 const init = () => {
@@ -50,6 +50,21 @@ const init = () => {
   renderer.outputEncoding = THREE.sRGBEncoding
   container.appendChild(renderer.domElement)
 
+  // controls
+  controls = new window.MapControls(camera, renderer.domElement)
+  controls.enableDamping = true // an animation loop is required when either damping or auto-rotation are enabled
+  controls.dampingFactor = 0.05
+
+  controls.autoRotate = true
+  controls.autoRotateSpeed = 0.5
+
+  controls.screenSpacePanning = false
+
+  controls.minDistance = 10
+  controls.maxDistance = 10000
+
+  controls.maxPolarAngle = Math.PI / 2
+
   window.addEventListener('resize', onWindowResize, false)
 }
 
@@ -65,7 +80,7 @@ const render = () => {
     item.rotation.y += 0.007
     item.updateMatrix()
   }
-
+  controls.update()
   renderer.render(scene, camera)
 }
 

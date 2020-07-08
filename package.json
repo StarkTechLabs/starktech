@@ -11,13 +11,22 @@
   "scripts": {
     "build": "node scripts/build.js",
     "release": "node scripts/build.js",
+    "watch": "nodemon scripts/build.js",
+    "serve": "http-server ./build -p 8080",
     "lint": "standard ./src/**/*.js",
     "lint:fix": "standard ./src/**/*.js --fix"
   },
   "devDependencies": {
-    "http-server": "^0.12.1",
-    "node-sass": "^4.13.1",
+    "http-server": "^0.12.3",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
     "standard": "^14.1.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.spec.js",
+      "build/**/*"
+    ]
   }
 }
