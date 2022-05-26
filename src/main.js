@@ -5,10 +5,10 @@ var objects
 const init = () => {
   container = document.getElementById('container')
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 15000)
-  camera.position.z = 250
+  camera.position.z = 5000
 
   scene = new THREE.Scene()
-  scene.background = new THREE.Color().setHSL(0.51, 0.4, 0.01)
+  // scene.background = new THREE.Color().setHSL(0.51, 0.4, 0.01)
   scene.fog = new THREE.Fog(scene.background, 3500, 15000)
 
   // world
@@ -38,9 +38,9 @@ const init = () => {
 
   // lights
 
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.30)
+  const dirLight = new THREE.DirectionalLight(0x5588aa, 0.30)
   dirLight.position.set(0, -1, 0).normalize()
-  dirLight.color.setHSL(0.1, 0.7, 0.5)
+  dirLight.color.setRGB(85 / 255, 136 / 255, 170 / 255)
   scene.add(dirLight)
 
   // renderer
