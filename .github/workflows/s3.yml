@@ -1,9 +1,8 @@
 name: Node CI
 
-on:
+on:  
   push:
-    branches:
-      - master
+    branches: [ main ]
 
 
 jobs:
