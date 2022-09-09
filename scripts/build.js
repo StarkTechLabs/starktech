@@ -14,6 +14,7 @@ const walkSync = function (dir, filelist = []) {
 const DEST = './build'
 const files = [
   'index.html',
+  'alison.html',
   ...walkSync('./src'),
   ...walkSync('./public')
 ]
