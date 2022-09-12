@@ -31,6 +31,14 @@
 
 <body class="darkGrey">
     <main>
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <div id="alison" class="alison fade-out-d8">
+            <h1 class="alison-title">Happy Birthday Alison!!</h1>
+            <p class="alison-subtitle">Since my handwriting and drawing skills are terrible, I decided to make you this
+                site to tell you how much I love you!</p>
+            <p class="alison-subtitle">🎉 Hope you have a fantastic day 🎉</p>
+            <p class="alison-subtitle">🍾 Now let's go celebrate you 🍾</p>
+        </div>
         <div id="container"></div>
     </main>
 
@@ -39,6 +47,15 @@
     <script type="text/javascript" src="public/lib/ColladaLoader.js"></script>
     <script type="text/javascript" src="public/lib/OrbitControls.js"></script>
     <script type="text/javascript" src="src/alison.js"></script>
+    <script type="text/javascript" src="src/fireworks.js"></script>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            var a = document.getElementById("alison")
+            a.remove()
+            console.log('removing alison container')
+        }, 10 * 1000) // 10 seconds
+    </script>
 
 </body>
 

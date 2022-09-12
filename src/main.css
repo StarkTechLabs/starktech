@@ -15,7 +15,8 @@ body {
 }
 
 .darkGrey {
-  background-color: #333333;
+  background-color: #00000f;
+  background: linear-gradient(to bottom, #020111 60%, #20202c 100%);
 }
 
 #container {
@@ -23,6 +24,7 @@ body {
   height: 100vh;
   z-index: 10;
 }
+
 
 .bg {
   display: flex;
@@ -98,4 +100,72 @@ a:focus {
   .title {
     font-size: 34px;
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0
+  }
+
+  10% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1
+  }
+
+  90% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+.alison {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 11;
+}
+
+.alison-title {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 9.5s;
+  animation-delay: 0.5s;
+}
+
+.alison-subtitle {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 8.5s;
+  animation-delay: 1.5s;
+}
+
+.fade-out-d8 {
+  animation-name: fade-out;
+  animation-duration: 2s;
+  animation-delay: 8s;
+}
+
+#canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
 }

@@ -69,7 +69,7 @@ const init = () => {
   camera.add(pointLight)
 
   // renderer
-  renderer = new THREE.WebGLRenderer({ antialias: true })
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.outputEncoding = THREE.sRGBEncoding
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
@@ -98,7 +98,7 @@ const render = () => {
     item.rotation.y += 0.007
     item.updateMatrix()
   }
-  mixer.update(delta)
+  mixer && mixer.update(delta)
   renderer.render(scene, camera)
 }
 
