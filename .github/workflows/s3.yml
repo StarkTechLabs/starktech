@@ -1,28 +1,32 @@
 name: Node CI
 
-on:  
+on:
   push:
-    branches: [ main ]
-
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-    - name: Install dependencies
-      run: npm ci && npm i aws-sdk
-    - name: Build
-      run: npm run release
-    - name: Upload to s3
-      run: node ./scripts/publishS3.js upload
-      env:
-        CI: true
-        AWS_KEY: ${{ secrets.AWS_KEY }}
-        AWS_SECRET: ${{ secrets.AWS_SECRET }}
-        S3_BUCKET: ${{ secrets.S3_BUCKET }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm ci && npm i aws-sdk
+      - name: Read GitHub Ref
+        id: vars
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set Package Version
+        run: npm version ${{ env.tag }} --no-git-tag-version
+      - name: Build
+        run: npm run release
+      - name: Upload to s3
+        run: node ./scripts/publishS3.js upload
+        env:
+          CI: true
+          AWS_KEY: ${{ secrets.AWS_KEY }}
+          AWS_SECRET: ${{ secrets.AWS_SECRET }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}

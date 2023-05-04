@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "build/**/*"
+  ],
+  "watch": [
+    "*.html",
+    "src/**/*",
+    "public/**/*"
+  ],
+  "ext": "js,json,html,css"
+}
