@@ -23,12 +23,6 @@
     "rimraf": "^3.0.2",
     "standard": "^14.1.0"
   },
-  "nodemonConfig": {
-    "ignore": [
-      "*.spec.js",
-      "build/**/*"
-    ]
-  },
   "dependencies": {
     "typescript": "^4.8.3"
   }
