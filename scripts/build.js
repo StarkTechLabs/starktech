@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const rimraf = require('rimraf')
+const { rimrafSync } = require('rimraf')
 
 const walkSync = function (dir, filelist = []) {
   fs.readdirSync(dir).forEach(function (file) {
@@ -19,7 +19,7 @@ const files = [
   ...walkSync('./public')
 ]
 
-rimraf.sync(DEST)
+rimrafSync(DEST)
 fs.mkdirSync(DEST)
 
 for (const file of files) {
