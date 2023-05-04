@@ -30,13 +30,77 @@
   </script>
 </head>
 
-<body class="blue">
+<body class="darkGrey">
   <main>
     <div id="container"></div>
-    <div class="title">Stark Tech</div>
-    <footer>
-      <div><a href="mailto:michael@starktech.dev" title="Email">michael@starktech.dev</a></div>
-    </footer>
+    <nav>
+      <ul>
+        <li><a href="/#home" title="Home" aria-label="Home"><svg xmlns="http://www.w3.org/2000/svg" height="48"
+              viewBox="0 96 960 960" width="48">
+              <path
+                d="M220 876h150V626h220v250h150V486L480 291 220 486v390Zm-60 60V456l320-240 320 240v480H530V686H430v250H160Zm320-353Z" />
+            </svg></a></li>
+        <li><a href="/#about" title="About" aria-label="About"><svg xmlns="http://www.w3.org/2000/svg" height="48"
+              viewBox="0 96 960 960" width="48">
+              <path
+                d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z" />
+            </svg></a></li>
+        <li><a href="/#contact" title="Contact" aria-label="Contact"><svg xmlns="http://www.w3.org/2000/svg" height="48"
+              viewBox="0 96 960 960" width="48">
+              <path d="M120 896V256l760 320-760 320Zm60-93 544-227-544-230v168l242 62-242 60v167Zm0 0V346v457Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+    <div class="parallax-container">
+      <div class="buffer h-40"></div>
+      <div class="section home">
+        <a class="anchor" id="home"></a>
+        <div class="title">Stark Tech</div>
+        <div class="subtitle">A new kind of product agency to get you to market faster than ever</div>
+        <div class="scroll-indicator">
+          <p>Scroll to Continue</p>
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+            <path d="M480 896 160 576l42-42 248 248V256h60v526l248-248 42 42-320 320Z" />
+          </svg>
+        </div>
+      </div>
+      <div class="buffer"></div>
+      <div class="section about">
+        <a class="anchor" id="about"></a>
+        <div class="subtitle">Fast - Reliable</div>
+        <div class="">
+          Want to get your new product or service up and running fast? We deliver our solutions in half the time as the
+          average agency. Not everything has to be custom.
+          How do we do it? By leveraging our prior solutions, open-source, and our seasoned team we can build technology
+          fast. Most solutions these days are a combination of software features that have already been built by other
+          people.
+          You are innovating on a small piece of the solution so let us build the core platform with things like
+          authentication, user management, notifications, etc.
+        </div>
+      </div>
+      <div class="buffer"></div>
+      <div id="tech" class="section tech">
+        <a class="anchor" id="tech"></a>
+        <div class="subtitle">What we typically work with</div>
+        <div class="">
+          Clouds: AWS, GCP, Azure
+          <br />
+          Languages: Javascript, Typescript, Go, Flutter/Dart
+          <br />
+          Specialties: Data APIs, Admin Consoles
+          <br />
+        </div>
+      </div>
+      <div class="buffer"></div>
+      <div id="contact" class="section contact">
+        <a class="anchor" id="contact"></a>
+        <footer>
+          <div class="subtitle">Let's Chat</div>
+          <a href="mailto:michael@starktech.dev" title="Email">michael@starktech.dev</a>
+        </footer>
+      </div>
+      <div class="buffer"></div>
+    </div>
   </main>
 
   <!-- Dependencies -->
