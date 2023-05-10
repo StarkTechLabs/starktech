@@ -17,7 +17,7 @@ const registerSectionScrollFade = () => {
     positionTop += sec.clientHeight
     // console.log('section scroll listener', sec.id)
     parallax.addEventListener('scroll', () => {
-      const offsetModify = window.innerHeight > 100 ? 150 : 250
+      const offsetModify = window.innerHeight > 100 ? 100 : 150
       sec.style.opacity = 1 - (parallax.scrollTop - current + offsetModify) / (window.innerHeight * 0.1)
     })
   }
