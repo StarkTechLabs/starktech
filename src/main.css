@@ -101,7 +101,7 @@ a.anchor {
 
 .title {
   font-size: 64px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 24px;
 }
 
@@ -134,6 +134,23 @@ a.anchor {
 
 .about {}
 
+.tech {}
+
+.tech-grid {
+  display: grid;
+  grid-template-areas:
+    'main main main'
+    'main main main';
+  gap: 25%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.tech-grid img {
+  height: 75px;
+}
+
 .contact {
   font-size: 16px;
 }
@@ -144,7 +161,12 @@ a.anchor {
   }
 
   .subtitle {
-    font-size: 16px;
+    font-size: 24px;
+  }
+
+  .tech-grid {
+    grid-template-areas:
+      'main main';
   }
 }
 
