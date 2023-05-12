@@ -168,6 +168,10 @@ a.anchor {
     grid-template-areas:
       'main main';
   }
+
+  .tech-grid img {
+    height: 48px;
+  }
 }
 
 @keyframes fade-in-out {
